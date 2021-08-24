@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-color: var(--paleBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div#box{
+    width: 360px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.5);
+}
+
+div#box img#header{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div#box h1#box-title{
+    color: var(--darkBlue);
+    font-family: 'Red Hat Display';
+    font-size: 25px;
+    margin: 30px 0 10px;
+}
+
+div#box p#box-preview{
+    margin: 0 25px;
+    color: var(--desaturatedBlue);  
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    font-size: 15px;
+}
+
+div#box div#plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: var(--veryPaleBlue);
+    margin: 20px 40px;
+    border-radius: 10px;
+}
+
+div#box div#plan div#plan-info{
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+div#box div#plan div#plan-info p#plan-title{
+    color: var(--darkBlue);
+    font-family: 'Red Hat Display';
+    font-weight: 900;
+    font-size: 15px;
+}
+
+div#box div#plan div#plan-info p#plan-price{
+    color: var(--desaturatedBlue);
+    font-family: 'Red Hat Display';
+    font-size: 15px;
+}
+
+div#box div#plan a{
+    font-family: 'Red Hat Display';
+    font-size: 15px;
+}
+
+div#box div#plan a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+div#box button{
+    width: calc(100% - 80px);
+    background-color: var(--brightBlue);
+    color: #fff;
+    font-family: 'Red Hat Display';
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 1px solid var(--darkBlue);
+    cursor: pointer;
+    box-shadow: 2px 8px 50px -11px var(--brightBlue);
+}
+
+div#box button:hover{
+    opacity: 0.7;
+}
+
+div#box p#cancel-order{
+    margin: 10px 0 30px;
+    color: var(--desaturatedBlue);
+    font-weight: 900;
+    font-family: 'Red Hat Display';
+}
+
+div#box p#cancel-order:hover{
+    color: var(--darkBlue);
+    cursor: pointer;
+}
+
+.attribution{ 
+    font-size: 11px; text-align: center;
+    margin-top: 20px;
+    font-family: 'Red Hat Display';
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px){
+    div#box{
+        width: 300px;
+    }
+
+    div#box div#plan{
+        margin: 20px;
+    }
+
+    div#box div#plan div#plan-info p#plan-title, div#box div#plan div#plan-info p#plan-price{
+        font-size: 13px;
+    }
+
+    div#box div#plan img{
+        width: 40px;
+        height: 40px;
+    }
+
+    div#box button{
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 320px){
+    div#box{
+        width: 95%;
+        min-width: 220px;
+    }
+
+    div#box h1#box-title{
+        font-size: 20px;
+    }
+
+    div#box p#box-preview{
+        font-size: 12px;
+    }
+
+    div#box div#plan{
+        margin: 15px;
+    }
+
+    div#box div#plan a{
+        font-size: 12px;
+    }
+
+    div#box button{
+        width: calc(100% - 30px);
+    }
+
+    div#box p#cancel-order{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 260px){
+    div#box div#plan{
+        padding: 15px 10px;
+    }
+
+    div#box div#plan div#plan-info{
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-height: 600px){
+    body{
+        justify-content: start;
+        overflow-y: scroll;
+    }
+
+    div#box{
+        margin-top: 10px;
+    }
+
+}
